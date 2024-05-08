@@ -16,10 +16,10 @@ cnt=0
 for p in range(4, 1001):
     n=0
     
-    for c in range(p-2, p):
-        for b in range(c-2, c):
+    for c in range(p//3+2, p-2):
+        for b in range(p//3, c):
             a = c - b
-            if (a ** 2 + b ** 2) == c**2:
+            if (a ** 2 + b ** 2) == c**2 and 0 < a <= b:
                 n += 1
     if cnt < n:
         cnt = n

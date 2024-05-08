@@ -12,8 +12,8 @@ Created on Fri Apr 26 14:27:58 2024
 # a + b + c = 1000 인 피타고라스 수 a, b, c는 한 가지 뿐입니다. 이 때, a × b × c 는 얼마입니까?
 
 
-for a in range(1, 1001):
-    for b in range(a+1, 1001):
+for a in range(1, 333):
+    for b in range(a+1, 1001-a):
         c = 1000 - a - b
         if a**2 + b**2 == c**2 and b < c:
             print('a, b, c의 값은', a, b, c, '입니다')
